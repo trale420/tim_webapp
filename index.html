@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+	<script src="script.js"></script>
+	<title>Promo TIM - Centro Gabriele</title>
+	<header>
+		<h1><i class="fas fa-tags"></i> Promo TIM</h1>
+		<h3>Benvenuto! Seleziona una categoria per vedere le offerte disponibili.</h3>
+	</header>
+
+	<main>
+		<section id="categorie">
+			<button onclick="mostraPromo('mobile')"><i class="fas fa-phone"></i> Mobile</button>
+			<button onclick="mostraPromo('internet')"><i class="fas fa-wifi"></i> Internet</button>
+			<button onclick="mostraPromo('business')"><i class="fas fa-building"></i> Business</button>
+		</section>
+
+		<section id="mobile-options" class="hidden">
+			<button onclick="tornaIndietro()">← Torna indietro</button>
+			<h2><i class="fas fa-sim-card"></i> Offerte Mobile</h2>
+			<button onclick="mostraCliente('nuovo')">Nuovo Cliente</button>
+			<button onclick="mostraCliente('gia')">Già Cliente</button>
+		</section>
+
+		<section id="internet-options" class="hidden">
+			<button onclick="tornaIndietro()">← Torna indietro</button>
+			<h2><i class="fas fa-wifi"></i>Offerte Internet</h2>
+			<button onclick="mostraClienteInternet('nuovo')">Nuovo Cliente</button>
+			<button onclick="mostraClienteInternet('gia')">Già Cliente</button>
+			<button onclick="mostraUnica()">TIM UNICA</button>
+		</section>
+
+		<section id="smartphone-options" class="hidden">
+			<button onclick="tornaIndietro()">← Torna indietro</button>
+		</section>
+
+		<section id="business-options" class="hidden">
+			<button onclick="tornaIndietro()">← Torna indietro</button>
+		</section>
+
+		<section id="new-internet" class="hidden">		
+			<button onclick="tornaIndietro()">← Torna indietro</button>
+			<h2><i class="fas fa-wifi"></i>Offerte Internet</h2>
+			<button onclick="mostraOfferteInternet('fibra')">Fibra</button>
+			<button onclick="mostraOfferteInternet('fwa')">FWA</button>
+			<div id="contenuto-internet" class="hidden"></div>
+		</section>
+
+		<section id="unica-cont" class="hidden">
+			<button onclick="tornaIndietro()">← Torna indietro</button>
+			<div id="contenuto-unica" class="hidden">uidfhisd</div>
+			<div class="unica-container">
+				<div class="promo-card tim-ultra-card">
+			<div class="promo-header">TIM UNICA POWER</div>
+			<h2 style="background-color: red; color: white; padding: 20px; font-size: 2em; border-radius: 12px;">GRATIS</h2>
+			<div class="activation-cost"><br></div>
+			<br>
+			</div>
+			</div>
+			<div class="unica-info">
+			<div class="promo-card">
+			<li><strong style="color: red;">NOVITÁ:</strong> Per i nuovi clienti TIM mobili che scelgono di attivare una tra le offerte presenti nella sezione compatibilità, verrà attivata automaticamente la nuova opzione <strong>TIM 15 GB 5G</strong>, ha durata 30 giorni e serve a coprire il tempo necessario per espletazione della linea fissa e attivare <strong>TIM UNICA POWER</strong>.</li>
+			<li><strong>TIM UNICA Power GRATIS</strong> per i nuovi clienti di linea fissa con TIM WiFi Casa/Aree Bianche, Premium Base, o TIM WiFi Power FWA.</li>
+			<li><strong>Promo Tim Unica Power 3 SIM:</strong> TIM UNICA Power GRATIS se il network ha più di 3 SIM; anche per clienti che migrano da TIM UNICA vs TIM UNICA Power con almeno 3 SIM. Tale beneficio sarà riconosciuto fino a quando verranno mantenute in Tim Unica Power almeno tre linee mobili di Tim.</li>
+			<li>TIM UNICA Power è l’Offerta riservata ai clienti TIM che hanno attiva una linea telefonica di rete fissa e che permette di avere ogni mese <strong>GIGA ILLIMITATI in 5G ULTRA</strong> e <strong>6GB in roaming UE</strong> per ciascuna linea mobile associata in TIM UNICA Power. È possibile associare a TIM UNICA Power fino a 6 linee mobili della famiglia, anche con intestatario diverso dal titolare di linea fissa.</li>
+			<li><strong>TIM UNICA POWER</strong> non compatibile con bollettino postale</li>
+			</div>
+			</div>
+		</section>
+
+		<section id="newsim-or-not" class="hidden">
+			<button onclick="tornaIndietro()">← Torna indietro</button>
+			<h2><i class="fas fa-sim-card"></i> Nuovo numero o vuoi tenere il tuo?</h2>
+			<button onclick="mostraOfferteSIM('new')">Nuovo SIM</button>
+			<button onclick="mostraOfferteSIM('port')">Portabilità</button>
+		</section>
+
+		<section id="portabilita" class="hidden">
+			<button onclick="tornaIndietro()">← Torna indietro</button>
+			<h3>Seleziona operatore:</h3>
+			<button onclick="mostraOpzioniOperatore('vodafone')">Vodafone</button>
+			<button onclick="mostraOpzioniOperatore('homobile')">ho Mobile</button>
+			<button onclick="mostraOpzioniOperatore('wind')">Wind</button>
+			<button onclick="mostraOpzioniOperatore('very')">Very</button>
+			<button onclick="mostraOpzioniOperatore('op-vir')">Operatori Virtuali</button>
+			<div id="contenuto-operatore" class="promo-card hidden"></div>
+		</section>
+
+		<section id="new-sim" class="promo-card hidden">
+			<button onclick="tornaIndietro()">← Torna indietro</button>
+			<h3>Seleziona:</h3>
+			<button onclick="mostraOpzioniNewSim('all')">AllInOne</button>
+			<button onclick="mostraOpzioniNewSim('voce')">Voce</button>
+			<button onclick="mostraOpzioniNewSim('dati')">Dati</button>
+			<button onclick="mostraOpzioniNewSim('etnica')">Etnica</button>
+			<div id="contenuto-new-sim" class="promo-card hidden"></div>
+		</section>
+	</main>
+
+</body>
+
+</html>
