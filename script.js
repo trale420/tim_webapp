@@ -1,3 +1,11 @@
+function mostraScelta(categoria) {
+	document.getElementById("scelta_in").classList.add("hidden");
+	if (categoria === "tim") {
+		document.getElementById("categorie").classList.remove("hidden");
+	} else if (categoria == "resine") {
+		document.getElementById("resine-options").classList.remove("hidden");
+	}
+}
 function mostraPromo(categoria) {
 	document.getElementById("categorie").classList.add("hidden");
 	if (categoria === "mobile") {
@@ -12,7 +20,8 @@ function mostraPromo(categoria) {
 }
 
 function tornaIndietro() {
-	document.getElementById("categorie").classList.remove("hidden");
+	document.getElementById("scelta_in").classList.remove("hidden");
+	document.getElementById("categorie").classList.add("hidden");
 	document.getElementById("mobile-options").classList.add("hidden");
 	document.getElementById("portabilita").classList.add("hidden");
 	document.getElementById("newsim-or-not").classList.add("hidden");
@@ -23,7 +32,9 @@ function tornaIndietro() {
 	document.getElementById("new-internet").classList.add("hidden");
 	document.getElementById("contenuto-internet").classList.add("hidden");
 	document.getElementById("unica-cont").classList.add("hidden");
-  document.getElementById("contenuto-unica").classList.add("hidden");
+	document.getElementById("contenuto-unica").classList.add("hidden");
+	document.getElementById("resine-options").classList.add("hidden");
+	document.getElementById("contenuto-resine").classList.add("hidden");
 }
 
 function mostraClienteInternet(tipo) {
@@ -31,14 +42,13 @@ function mostraClienteInternet(tipo) {
 	} else if (tipo == "nuovo") {
 		document.getElementById("internet-options").classList.add("hidden");
 		document.getElementById("new-internet").classList.remove("hidden");
-  }	
-}
-function mostraUnica(){
-    document.getElementById("categorie").classList.add("hidden");
-    document.getElementById("internet-options").classList.add("hidden")
-		document.getElementById("unica-cont").classList.remove("hidden");
 	}
-
+}
+function mostraUnica() {
+	document.getElementById("categorie").classList.add("hidden");
+	document.getElementById("internet-options").classList.add("hidden");
+	document.getElementById("unica-cont").classList.remove("hidden");
+}
 
 function mostraCliente(tipo) {
 	if (tipo === "nuovo") {
@@ -60,8 +70,8 @@ function mostraOfferteSIM(tipo) {
 }
 function mostraOfferteInternet(tipo) {
 	const contenitore = document.getElementById("contenuto-internet");
-  //const temp = document.getElementById("unica-cont");
-  //temp.innerHTML= ``;
+	//const temp = document.getElementById("unica-cont");
+	//temp.innerHTML= ``;
 	contenitore.classList.remove("hidden");
 	if (tipo == "fibra") {
 		contenitore.innerHTML = `
@@ -246,6 +256,79 @@ function mostraOfferteInternet(tipo) {
 	}
 }
 
+function mostraOfferteResine(tipo) {
+	const contenitore = document.getElementById("contenuto-resine");
+	contenitore.classList.remove("hidden");
+	if (tipo == "eco") {
+		contenitore.innerHTML = `
+		 	<div class="resine-container">
+			<div class="resine-name"><h1>Lucida Base</h1></div>
+				<div class="resine-foto">
+    			<img src="img/mobilax.png" alt="Mobilax" height=250>
+					<img src="img/mobilax.jpg" alt="Mobilax1" height=250>
+					<div class="resine-desc"><h3>Protegge da graffi, applicazione in 5 minuti</h3></div>
+  			</div>
+			</div>
+		`;
+	} else if (tipo == "base") {
+		contenitore.innerHTML = `
+		 	<div class="resine-container">
+			<div class="resine-name"><h1>Lucida</h1></div>
+				<div class="resine-foto">
+    			<img src="img/clear1.jpg" alt="Clear" height=250>
+					<img src="img/clear.jpg" alt="Clear" height=250>
+					<div class="resine-desc"><h3>Protegge da graffi, materiale autorigenerante, applicazione in 5 minuti</h3></div>
+  			</div>
+			</div>
+		`;
+	} else if (tipo == "ultra") {
+		contenitore.innerHTML = `
+		 	<div class="resine-container">
+			<div class="resine-name"><h1>Lucida Ultra</h1></div>
+				<div class="resine-foto">
+    			<img src="img/elite.png" alt="Elite" height=250>
+					<img src="img/elite1.png" alt="Elite" height=250>
+					<div class="resine-desc"><h3>Protegge da graffi e urti, materiale autorigenerante, applicazione in 5 minuti</h3></div>
+  			</div>
+			</div>
+			<div class="resine-container">
+			<div class="resine-name"><h1>Opaca Ultra</h1></div>
+				<div class="resine-foto">
+					<img src="img/matte.jpg" alt="Matte" height=250>
+					<img src="img/matte1.jpg" alt="Matte" height=250>
+					<div class="resine-desc"><h3>Protegge da graffi e urti, materiale autorigenerante, opaca antiriflesso, applicazione in 5 minuti</h3></div>
+  			</div>
+			</div>
+		`;
+	} else if (tipo == "max") {
+		contenitore.innerHTML = `
+		 	<div class="resine-container">
+			<div class="resine-name"><h1>Privacy</h1></div>
+				<div class="resine-foto">
+    			<img src="img/privacy.jpg" alt="Privacy" height=250>
+					<img src="img/privacy1.jpg" alt="Privacy" height=250>
+					<div class="resine-desc"><h3>Protegge da graffi e urti, materiale autorigenerante, funzione nascondi schermo privacy, applicazione in 5 minuti</h3></div>
+  			</div>
+			</div>
+			<div class="resine-container">
+			<div class="resine-name"><h1>Opaca Privacy</h1></div>
+				<div class="resine-foto">
+					<img src="img/privacy-matte1.jpg" alt="Privacy Matte" height=250>
+					<img src="img/privacy-matte.jpg" alt="Privacy Matte" height=250>
+					<div class="resine-desc"><h3>Protegge da graffi e urti, materiale autorigenerante, opaca antiriflesso, fuznione nascondi schermo, applicazione in 5 minuti</h3></div>
+  			</div>
+			</div>
+			<div class="resine-container">
+			<div class="resine-name"><h1>Fortify Hybrid</h1></div>
+				<div class="resine-foto">
+					<img src="img/hybrid1.jpeg" alt="Hybrid" height=250>
+					<img src="img/hybrid.png" alt="Hybrid" height=250>
+					<div class="resine-desc"><h3>Protegge da graffi e urti, materiale misto vetro per una protezione ottimale, effetto vetro, applicazione in 5 minuti</h3></div>
+  			</div>
+			</div>
+		`;
+	}
+}
 function mostraOpzioniNewSim(tipo) {
 	const contenitore = document.getElementById("contenuto-new-sim");
 	contenitore.classList.remove("hidden");
