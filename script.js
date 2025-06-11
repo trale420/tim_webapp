@@ -1,9 +1,19 @@
 function mostraScelta(categoria) {
 	document.getElementById("scelta_in").classList.add("hidden");
-	if (categoria === "tim") {
-		document.getElementById("categorie").classList.remove("hidden");
-	} else if (categoria == "resine") {
+	if (categoria == "resine") {
 		document.getElementById("resine-options").classList.remove("hidden");
+	} else if(categoria == "servizi"){
+		document.getElementById("categorie-servizi").classList.remove("hidden");
+	} else if(categoria== "3d"){
+		document.getElementById("3d-options").classList.remove("hidden");
+	} else if(categoria=="stampa-per"){
+		document.getElementById("stampa-options").classList.remove("hidden");
+	}
+}
+function mostraOfferteServizio(gestore){
+	document.getElementById("categorie-servizi").classList.add("hidden");
+	if (gestore == "tim") {
+		document.getElementById("categorie-tim").classList.remove("hidden");
 	}
 }
 function mostraPromo(categoria) {
@@ -21,7 +31,7 @@ function mostraPromo(categoria) {
 
 function tornaIndietro() {
 	document.getElementById("scelta_in").classList.remove("hidden");
-	document.getElementById("categorie").classList.add("hidden");
+	document.getElementById("categorie-tim").classList.add("hidden");
 	document.getElementById("mobile-options").classList.add("hidden");
 	document.getElementById("portabilita").classList.add("hidden");
 	document.getElementById("newsim-or-not").classList.add("hidden");
@@ -35,6 +45,8 @@ function tornaIndietro() {
 	document.getElementById("contenuto-unica").classList.add("hidden");
 	document.getElementById("resine-options").classList.add("hidden");
 	document.getElementById("contenuto-resine").classList.add("hidden");
+	document.getElementById("categorie-servizi").classList.add("hidden");
+	document.getElementById("3d-options").classList.add("hidden");
 }
 
 function mostraClienteInternet(tipo) {
