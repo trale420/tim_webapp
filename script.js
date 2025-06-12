@@ -2,22 +2,22 @@ function mostraScelta(categoria) {
 	document.getElementById("scelta_in").classList.add("hidden");
 	if (categoria == "resine") {
 		document.getElementById("resine-options").classList.remove("hidden");
-	} else if(categoria == "servizi"){
+	} else if (categoria == "servizi") {
 		document.getElementById("categorie-servizi").classList.remove("hidden");
-	} else if(categoria== "3d"){
+	} else if (categoria == "3d") {
 		document.getElementById("3d-options").classList.remove("hidden");
-	} else if(categoria=="stampa-per"){
+	} else if (categoria == "stampa-per") {
 		document.getElementById("stampa-options").classList.remove("hidden");
 	}
 }
-function mostraOfferteServizio(gestore){
+function mostraOfferteServizio(gestore) {
 	document.getElementById("categorie-servizi").classList.add("hidden");
 	if (gestore == "tim") {
 		document.getElementById("categorie-tim").classList.remove("hidden");
 	}
 }
 function mostraPromo(categoria) {
-	document.getElementById("categorie").classList.add("hidden");
+	document.getElementById("categorie-tim").classList.add("hidden");
 	if (categoria === "mobile") {
 		document.getElementById("mobile-options").classList.remove("hidden");
 	} else if (categoria == "internet") {
@@ -47,6 +47,7 @@ function tornaIndietro() {
 	document.getElementById("contenuto-resine").classList.add("hidden");
 	document.getElementById("categorie-servizi").classList.add("hidden");
 	document.getElementById("3d-options").classList.add("hidden");
+	document.getElementById("stampa-options").classList.add("hidden");
 }
 
 function mostraClienteInternet(tipo) {
