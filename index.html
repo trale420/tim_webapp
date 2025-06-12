@@ -28,7 +28,7 @@
 
 		<section id="categorie-servizi" class="hidden">
 			<header>
-				<button onclick="tornaIndietro()">← Torna indietro</button>
+				<button onclick="tornaIndietro()">⬅️Torna Indietro</button>
 				<h1><i class="fas fa-tags"></i> Promo TIM</h1>
 				<h3>Benvenuto! Seleziona un gestore per vedere le offerte disponibili.</h3>
 			</header>
@@ -39,7 +39,8 @@
 
 		<section id="categorie-tim" class="hidden">
 			<header>
-				<button onclick="tornaIndietro()">← Torna indietro</button>
+				<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
+				<button onclick="tornaIndietroTim()">⬅️Torna Indietro</button>
 				<h1><i class="fas fa-tags"></i> Promo TIM</h1>
 				<h3>Benvenuto! Seleziona una categoria per vedere le offerte disponibili.</h3>
 			</header>
@@ -48,53 +49,81 @@
 		</section>
 
 		<section id="mobile-options" class="hidden">
-			<button onclick="tornaIndietro()">← Torna indietro</button>
+			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
+			<button onclick="tornaIndietroTimMob()">⬅️Torna Indietro</button>
 			<h2><i class="fas fa-sim-card"></i> Offerte Mobile</h2>
 			<button onclick="mostraCliente('nuovo')">Nuovo Cliente</button>
 			<button onclick="mostraCliente('gia')">Già Cliente</button>
 		</section>
 
+		<section id="newsim-or-not" class="hidden">
+			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
+			<button onclick="tornaIndietroTimNew()">⬅️Torna Indietro</button>
+			<h2><i class="fas fa-sim-card"></i> Nuovo numero o vuoi tenere il tuo?</h2>
+			<button onclick="mostraOfferteSIM('new')">Nuovo SIM</button>
+			<button onclick="mostraOfferteSIM('port')">Portabilità</button>
+		</section>
+
+		<section id="new-sim" class="promo-card hidden">
+			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
+			<button onclick="tornaIndietroTimNewSim()">⬅️Torna Indietro</button>
+			<h3>Seleziona:</h3>
+			<button onclick="mostraOpzioniNewSim('all')">AllInOne</button>
+			<button onclick="mostraOpzioniNewSim('voce')">Voce</button>
+			<button onclick="mostraOpzioniNewSim('dati')">Dati</button>
+			<button onclick="mostraOpzioniNewSim('etnica')">Etnica</button>
+			<div id="contenuto-new-sim" class="promo-card hidden"></div>
+		</section>
+
+		<section id="portabilita" class="hidden">
+			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
+			<button onclick="tornaIndietroTimPort()">⬅️Torna Indietro</button>
+			<h3>Seleziona operatore:</h3>
+			<button onclick="mostraOpzioniOperatore('vodafone')">Vodafone</button>
+			<button onclick="mostraOpzioniOperatore('homobile')">ho Mobile</button>
+			<button onclick="mostraOpzioniOperatore('wind')">Wind</button>
+			<button onclick="mostraOpzioniOperatore('very')">Very</button>
+			<button onclick="mostraOpzioniOperatore('op-vir')">Operatori Virtuali</button>
+			<div id="contenuto-operatore" class="promo-card hidden"></div>
+		</section>
+
 		<section id="internet-options" class="hidden">
-			<button onclick="tornaIndietro()">← Torna indietro</button>
+			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
+			<button onclick="tornaIndietroTimFisso()">⬅️Torna Indietro</button>
 			<h2><i class="fas fa-wifi"></i>Offerte Internet</h2>
 			<button onclick="mostraClienteInternet('nuovo')">Nuovo Cliente</button>
 			<button onclick="mostraUnica()">TIM UNICA</button>
 		</section>
 
-		<section id="3d-options" class="hidden">
-			<button onclick="tornaIndietro()">← Torna indietro</button>
-			<h2><i class="fas fa-wifi"></i>Prodotti Stampa 3D</h2>
-			<button onclick="mostraOpzioni3D('souvenir')">Souvenir</button>
-			<button onclick="mostraOpzioni3D('litofanie')">Litofanie</button>
-			<button onclick="mostraOpzioni3D('portachiavi')">Portachiavi</button>
-			<button onclick="mostraOpzioni3D('topper')">Topper</button>
-		</section>
-
-		<section id="stampa-options" class="hidden">
-			<button onclick="tornaIndietro()">← Torna indietro</button>
-			<h2><i class="fas fa-wifi"></i>Prodotti Stampe Personalizzate</h2>
-			<button onclick="mostraOpzioniStampa('souvenir')">Cover Smartphone</button>
-			<button onclick="mostraOpzioniStampa('litofanie')">Cover AirPods</button>
-		</section>
-
-		<section id="smartphone-options" class="hidden">
-			<button onclick="tornaIndietro()">← Torna indietro</button>
-		</section>
-
-		<section id="business-options" class="hidden">
-			<button onclick="tornaIndietro()">← Torna indietro</button>
-		</section>
-
 		<section id="new-internet" class="hidden">
-			<button onclick="tornaIndietro()">← Torna indietro</button>
+			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
+			<button onclick="tornaIndietroTimNewFisso()">⬅️Torna Indietro</button>
 			<h2><i class="fas fa-wifi"></i>Offerte Internet</h2>
 			<button onclick="mostraOfferteInternet('fibra')">Fibra</button>
 			<button onclick="mostraOfferteInternet('fwa')">FWA</button>
 			<div id="contenuto-internet" class="hidden"></div>
 		</section>
 
+		<section id="print3d-options" class="hidden">
+			<button onclick="tornaIndietro()">⬅️Torna Indietro</button>
+			<h2><i class="fas fa-wifi"></i>Prodotti Stampa 3D</h2>
+			<button src="img/souvenir.jpg" class="print3d-but" onclick="mostraOpzioni3D('souvenir')">Souvenir</button>
+			<button src="img/litofania.jpg" class="print3d-but" onclick="mostraOpzioni3D('litofanie')">Litofanie</button>
+			<button src="img/portachiavi.jpg" class="print3d-but" onclick="mostraOpzioni3D('portachiavi')">Portachiavi</button>
+			<button src="img/topper.jpg" class="print3d-but" onclick="mostraOpzioni3D('topper')">Topper</button>
+			<div id="contenuto-3d" class="hidden"></div>
+		</section>
+
+		<section id="stampa-options" class="hidden">
+			<button onclick="tornaIndietro()">⬅️Torna Indietro</button>
+			<h2><i class="fas fa-wifi"></i>Prodotti Stampe Personalizzate</h2>
+			<button onclick="mostraOpzioniStampa('souvenir')">Cover Smartphone</button>
+			<button onclick="mostraOpzioniStampa('litofanie')">Cover AirPods</button>
+		</section>
+
 		<section id="unica-cont" class="hidden">
-			<button onclick="tornaIndietro()">← Torna indietro</button>
+			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
+			<button onclick="tornaIndietroTimUnica()">⬅️Torna Indietro</button>
 			<div id="contenuto-unica" class="hidden"></div>
 			<div class="unica-container">
 				<div class="promo-card tim-ultra-card">
@@ -115,16 +144,8 @@
 			</div>
 		</section>
 
-		<section id="newsim-or-not" class="hidden">
-			<button onclick="tornaIndietro()">← Torna indietro</button>
-			<h2><i class="fas fa-sim-card"></i> Nuovo numero o vuoi tenere il tuo?</h2>
-			<button onclick="mostraOfferteSIM('new')">Nuovo SIM</button>
-			<button onclick="mostraOfferteSIM('port')">Portabilità</button>
-		</section>
-
 		<section id="resine-options" class="hidden">
-			<button onclick="tornaIndietro()">← Torna indietro</button>
-			<title>Promo TIM - Centro Gabriele</title>
+			<button onclick="tornaIndietro()">⬅️Torna Indietro</button>
 			<header>
 				<h1><i class="fas fa-tags"></i>Resine Protettive</h1>
 				<h3>Benvenuto! Seleziona una categoria di prezzo per vedere le protezioni disponibili.</h3>
@@ -134,27 +155,6 @@
 				<button onclick="mostraOfferteResine('max')">Max</button>
 				<div id="contenuto-resine" class="hidden" style="display:flex;"></div>
 			</header>
-		</section>
-
-		<section id="portabilita" class="hidden">
-			<button onclick="tornaIndietro()">← Torna indietro</button>
-			<h3>Seleziona operatore:</h3>
-			<button onclick="mostraOpzioniOperatore('vodafone')">Vodafone</button>
-			<button onclick="mostraOpzioniOperatore('homobile')">ho Mobile</button>
-			<button onclick="mostraOpzioniOperatore('wind')">Wind</button>
-			<button onclick="mostraOpzioniOperatore('very')">Very</button>
-			<button onclick="mostraOpzioniOperatore('op-vir')">Operatori Virtuali</button>
-			<div id="contenuto-operatore" class="promo-card hidden"></div>
-		</section>
-
-		<section id="new-sim" class="promo-card hidden">
-			<button onclick="tornaIndietro()">← Torna indietro</button>
-			<h3>Seleziona:</h3>
-			<button onclick="mostraOpzioniNewSim('all')">AllInOne</button>
-			<button onclick="mostraOpzioniNewSim('voce')">Voce</button>
-			<button onclick="mostraOpzioniNewSim('dati')">Dati</button>
-			<button onclick="mostraOpzioniNewSim('etnica')">Etnica</button>
-			<div id="contenuto-new-sim" class="promo-card hidden"></div>
 		</section>
 	</main>
 
