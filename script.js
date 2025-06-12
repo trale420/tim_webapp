@@ -5,7 +5,7 @@ function mostraScelta(categoria) {
 	} else if (categoria == "servizi") {
 		document.getElementById("categorie-servizi").classList.remove("hidden");
 	} else if (categoria == "3d") {
-		document.getElementById("3d-options").classList.remove("hidden");
+		document.getElementById("print3d-options").classList.remove("hidden");
 	} else if (categoria == "stampa-per") {
 		document.getElementById("stampa-options").classList.remove("hidden");
 	}
@@ -37,8 +37,6 @@ function tornaIndietro() {
 	document.getElementById("newsim-or-not").classList.add("hidden");
 	document.getElementById("new-sim").classList.add("hidden");
 	document.getElementById("internet-options").classList.add("hidden");
-	document.getElementById("smartphone-options").classList.add("hidden");
-	document.getElementById("business-options").classList.add("hidden");
 	document.getElementById("new-internet").classList.add("hidden");
 	document.getElementById("contenuto-internet").classList.add("hidden");
 	document.getElementById("unica-cont").classList.add("hidden");
@@ -46,8 +44,41 @@ function tornaIndietro() {
 	document.getElementById("resine-options").classList.add("hidden");
 	document.getElementById("contenuto-resine").classList.add("hidden");
 	document.getElementById("categorie-servizi").classList.add("hidden");
-	document.getElementById("3d-options").classList.add("hidden");
+	document.getElementById("print3d-options").classList.add("hidden");
 	document.getElementById("stampa-options").classList.add("hidden");
+	document.getElementById("contenuto-3d").classList.add("hidden");
+}
+function tornaIndietroTim() {
+	document.getElementById("categorie-servizi").classList.remove("hidden");
+	document.getElementById("categorie-tim").classList.add("hidden");
+}
+function tornaIndietroTimMob() {
+	document.getElementById("categorie-tim").classList.remove("hidden");
+	document.getElementById("mobile-options").classList.add("hidden");
+}
+function tornaIndietroTimNew() {
+	document.getElementById("mobile-options").classList.remove("hidden");
+	document.getElementById("newsim-or-not").classList.add("hidden");
+}
+function tornaIndietroTimNewSim() {
+	document.getElementById("newsim-or-not").classList.remove("hidden");
+	document.getElementById("new-sim").classList.add("hidden");
+}
+function tornaIndietroTimPort() {
+	document.getElementById("newsim-or-not").classList.remove("hidden");
+	document.getElementById("portabilita").classList.add("hidden");
+}
+function tornaIndietroTimFisso() {
+	document.getElementById("categorie-tim").classList.remove("hidden");
+	document.getElementById("internet-options").classList.add("hidden");
+}
+function tornaIndietroTimUnica() {
+	document.getElementById("internet-options").classList.remove("hidden");
+	document.getElementById("unica-cont").classList.add("hidden");
+}
+function tornaIndietroTimNewFisso() {
+	document.getElementById("internet-options").classList.remove("hidden");
+	document.getElementById("new-internet").classList.add("hidden");
 }
 
 function mostraClienteInternet(tipo) {
@@ -58,7 +89,6 @@ function mostraClienteInternet(tipo) {
 	}
 }
 function mostraUnica() {
-	document.getElementById("categorie").classList.add("hidden");
 	document.getElementById("internet-options").classList.add("hidden");
 	document.getElementById("unica-cont").classList.remove("hidden");
 }
@@ -1035,5 +1065,14 @@ function mostraOpzioniOperatore(operatore) {
 </div>
           </div>
         `;
+	}
+}
+function mostraOpzioni3D(tipo) {
+	const contenitore = document.getElementById("contenuto-3d");
+	contenitore.classList.remove("hidden");
+	if (tipo == "souvenir") {
+		contenitore.innerHTML = `
+			<h1>ciao</h1>
+		`;
 	}
 }
