@@ -11,7 +11,28 @@ header,
 section {
 	margin-bottom: 20px;
 }
+/*.print3d-but {
+	padding: 12px 24px;
+	margin: 10px;
+	font-size: 1.1em;
+	border-radius: 12px;
+	border: none;
+	background-color: #0019a8;
+	color: white;
+	cursor: pointer;
+}*/
 
+.categoria-icon {
+	width: 250px;
+	height: auto;
+}
+
+.print3d-options {
+	display: flex;
+	gap: 20px; /* spazio tra i bottoni */
+	justify-content: center; /* o flex-start / space-between */
+	flex-wrap: wrap; /* per andare a capo su schermi piccoli */
+}
 button {
 	padding: 12px 24px;
 	margin: 10px;
@@ -21,28 +42,6 @@ button {
 	background-color: #0019a8;
 	color: white;
 	cursor: pointer;
-}
-.print3d-but {
-	padding: 12px 24px;
-	margin: 10px;
-	font-size: 1.1em;
-	border-radius: 12px;
-	border: none;
-	background-color: #0019a8;
-	color: white;
-	cursor: pointer;
-}
-
-.print3d-but .categoria-icon {
-	width: 40px;
-	height: auto;
-}
-
-.print3d-options {
-	display: flex;
-	gap: 20px; /* spazio tra i bottoni */
-	justify-content: center; /* o flex-start / space-between */
-	flex-wrap: wrap; /* per andare a capo su schermi piccoli */
 }
 
 button:hover {
