@@ -6,7 +6,12 @@ body {
 /** {
 	font-family: "Minecraftia", monospace;
 }*/
-
+/** {
+	font-family: 'Orbitron', sans-serif;
+}*/
+* {
+	font-family: "Quicksand", sans-serif;
+}
 header,
 section {
 	margin-bottom: 20px;
@@ -288,9 +293,9 @@ ul li {
 	border: 2px solid #ccc;
 	border-radius: 20px;
 	text-align: center; /* Centra testo e blocchi figli */
-	max-width: 800px;
+	max-width: 500px;
 	margin: 0 auto; /* Centra il contenitore nella pagina */
-	padding: 20px;
+	padding: 25px;
 }
 .resine-foto {
 	gap: 50px;
@@ -300,26 +305,315 @@ ul li {
 	display: flex;
 }
 .resine-desc {
-	padding: 4px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	padding: 20px;
 	margin: 0 auto;
 	border-radius: 30px;
-	background-color: lightgray;
+	background-color: #eaf6ff;
+	color: #333333;
+	text-align: justify;
+}
+.resine-price {
+	padding: 0.5px;
+	margin: 0 auto;
+	border-radius: 20px;
+	width: 50px;
+	height: auto;
+	background-color: dodgerblue;
+	color: white;
+	margin-bottom: 50px;
 }
 .unica-container {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 20px;
+	gap: 50px;
 	justify-content: center;
 	height: 100%;
 }
 .unica-info {
-	height: 100%;
-	width: 75%;
+	height: 500px%;
+	width: 100;
+	margin: 0 auto;
+	display: flex;
+	border: 2px solid #ccc;
+	border-radius: 20px;
+	padding: 40px;
+	gap: 20px;
 }
 .servizi-logo {
 	justify-items: center;
 }
-.resine-name h1,
+.resine-name {
+	font-weight: 700;
+	text-decoration: underline;
+	font-family: "Orbitron", sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	margin-bottom: 40px;
+}
 .resine-desc h3 {
 	margin: 0;
+}
+
+.sky-wrapper {
+	display: flex;
+	justify-content: center;
+	gap: 100px;
+	font-family: "Segoe UI", sans-serif;
+	margin: 40px auto;
+	flex-wrap: wrap;
+}
+
+.sky-card {
+	background: white;
+	border-radius: 25px;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+	width: 320px;
+	padding: 25px;
+	text-align: center;
+}
+
+.sky-header {
+	background: linear-gradient(to right, #fc4a1a, #f83600, #e91e63);
+	color: white;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 15px;
+	border-radius: 20px 20px 0 0;
+	margin-bottom: 20px;
+}
+
+.sky-price-badge {
+	position: relative;
+	background: linear-gradient(to right, #fc4a1a, #f83600, #e91e63);
+	border-radius: 20px;
+	color: white;
+	padding: 20px 0;
+	margin-bottom: 20px;
+}
+
+.sky-price-main {
+	font-size: 1.8em;
+	font-weight: bold;
+}
+
+.sky-price-sub {
+	font-size: 1em;
+	margin-left: 5px;
+}
+
+.sky-5g-badge {
+	position: absolute;
+	top: 0;
+	right: -25px;
+	background: linear-gradient(to bottom right, #ff416c, #ff4b2b);
+	color: white;
+	font-size: 0.7em;
+	font-weight: bold;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sky-features {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 20px 0;
+	font-size: 1.1em;
+}
+
+.sky-features li {
+	margin-bottom: 8px;
+}
+
+.sky-gb {
+	color: red;
+	font-weight: bold;
+}
+
+.sky-footer {
+	background: linear-gradient(to right, #fc4a1a, #f83600, #e91e63);
+	color: white;
+	font-weight: bold;
+	padding: 15px;
+	border-radius: 12px;
+	font-size: 1em;
+}
+
+#categorie-sky button {
+	/* stile solo per i bottoni dentro quel div */
+	background-image: linear-gradient(to right, #fc4a1a, #f83600, #e91e63);
+	padding: 12px 24px;
+	margin: 10px;
+	font-size: 1.1em;
+	border-radius: 12px;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+
+.internazionale-banner {
+	display: flex;
+	background: linear-gradient(to right, #e91e63, #ff5722);
+	border-radius: 20px;
+	padding: 20px 30px;
+	color: white;
+	font-size: 1.2em;
+	font-weight: 600;
+	width: 25%;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.internazionale-icon {
+	width: 60px;
+	height: 60px;
+	background-color: #ffca28;
+	border-radius: 50%;
+	padding: 10px;
+	rigth-margin: 50px;
+}
+
+.tim-viaggio-pass {
+	max-width: 400px;
+	margin: 20px auto;
+	font-family: "Segoe UI", sans-serif;
+	color: #000;
+}
+
+.tim-viaggio-header {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+	dislpay: flex;
+	text-align: center;
+	font-weight: 650;
+}
+.tim-viaggio-header .font {
+	font-weight: 500;
+}
+
+.tim-viaggio-box {
+	border: 1px solid #ccc;
+	padding: 20px;
+	border-radius: 16px;
+	background: white;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tim-viaggio-tags {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.tim-viaggio-tags .tag {
+	background: #002a9c;
+	color: white;
+	padding: 6px 10px;
+	border-radius: 6px;
+	font-size: 0.85em;
+	font-weight: bold;
+}
+
+.pass-title {
+	font-size: 1.3em;
+	margin-top: 10px;
+	font-weight: 700;
+}
+
+.pass-desc {
+	margin-top: 10px;
+	font-size: 0.95em;
+	line-height: 1.4;
+}
+
+.pass-price {
+	margin-top: 20px;
+	font-size: 1.8em;
+	font-weight: bold;
+}
+
+.pass-price .price-big {
+	font-size: 2.5em;
+}
+
+.pass-price .price-sub {
+	font-size: 0.9em;
+	font-weight: 400;
+}
+
+.price-note {
+	margin-top: 10px;
+	font-size: 0.85em;
+	color: #555;
+}
+.timvision-container {
+	display: flex;
+	gap: 75px;
+	overflow-x: auto;
+	padding-bottom: 20px;
+	justify-content: center;
+}
+
+.timvision-card {
+	background: #fff;
+	border-radius: 20px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+	flex: 0 0 300px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: transform 0.3s ease;
+}
+
+.timvision-card:hover {
+	transform: translateY(-5px);
+}
+
+.timvision-title {
+	font-weight: 600;
+	font-size: 18px;
+	color: #3a3a3a;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.timvision-icons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	margin: 5px 0;
+	gap: 5px;
+}
+
+.timvision-icons img {
+	width: 40px;
+	height: auto;
+	object-fit: contain;
+}
+
+.timvision-price {
+	background: linear-gradient(90deg, #f12711, #f5af19);
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 20px;
+	border-radius: 12px;
+	margin-top: 15px;
+}
+
+.timvision-note {
+	font-size: 12px;
+	color: #555;
+	margin-top: 5px;
+	text-align: center;
 }
