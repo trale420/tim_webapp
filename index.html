@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
 </head>
 
@@ -15,7 +17,7 @@
 	<script src="script.js"></script>
 
 	<main>
-		<section id="scelta_in" class="scelta">
+		<section id="scelta_in" class="promo-card">
 			<header>
 				<h1><i class="fas fa-tags"></i>Servizi</h1>
 				<h3>Benvenuto! Seleziona il servizio desiderato.</h3>
@@ -26,18 +28,18 @@
 			<button onclick="mostraScelta('stampa-per')">STAMPA PERSONALIZZATA</button>
 		</section>
 
-		<section id="categorie-servizi" class="hidden">
+		<section id="categorie-servizi" class="promo-card hidden">
 			<header>
-				<button onclick="tornaIndietro()">⬅️Torna Indietro</button>
-				<h1><i class="fas fa-tags"></i> Promo TIM</h1>
+				<button onclick="tornaIndietro()" class="">⬅️Torna Indietro</button>
+				<h1><i class="fas fa-tags"></i> Gestori</h1>
 				<h3>Benvenuto! Seleziona un gestore per vedere le offerte disponibili.</h3>
 			</header>
 			<button onclick="mostraOfferteServizio('tim')"><i class="fas fa-phone"></i> TIM</button>
-			<button onclick="mostraPromo('sky')"><i class="fas fa-wifi"></i> SKY</button>
-			<button onclick="mostraPromo('fastweb')"><i class="fas fa-wifi"></i> FASTWEB</button>
+			<button onclick="mostraOfferteServizio('sky')"><i class="fas fa-wifi"></i> SKY</button>
+			<button onclick="mostraOfferteServizio('fastweb')"><i class="fas fa-wifi"></i> FASTWEB</button>
 		</section>
 
-		<section id="categorie-tim" class="hidden">
+		<section id="categorie-tim" class="promo-card hidden">
 			<header>
 				<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
 				<button onclick="tornaIndietroTim()">⬅️Torna Indietro</button>
@@ -46,9 +48,10 @@
 			</header>
 			<button onclick="mostraPromo('mobile')"><i class="fas fa-phone"></i> Mobile</button>
 			<button onclick="mostraPromo('internet')"><i class="fas fa-wifi"></i> Fisso</button>
+			<button onclick="mostraPromo('vision')">TIM Vision</button>
 		</section>
 
-		<section id="mobile-options" class="hidden">
+		<section id="mobile-options" class="promo-card hidden">
 			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
 			<button onclick="tornaIndietroTimMob()">⬅️Torna Indietro</button>
 			<h2><i class="fas fa-sim-card"></i> Offerte Mobile</h2>
@@ -56,7 +59,44 @@
 			<button onclick="mostraCliente('gia')">Già Cliente</button>
 		</section>
 
-		<section id="newsim-or-not" class="hidden">
+		<section id="vision-options" class="promo-card hidden">
+			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
+			<button onclick="tornaIndietroTimVision()">⬅️Torna Indietro</button>
+			<div class="timvision-container">
+				<div class="timvision-card">
+					<div class="timvision-title">Intrattenimento</div>
+					<div class="timvision-icons"> <img src="img/disney.png" alt="Disney+"> <img src="img/prime.png" alt="Prime Video"> <img src="img/timvision.png" alt="TIMVISION"> <img src="img/netflix.png" alt="Netflix"> </div>
+					<div class="timvision-price">9,99€/MESE</div>
+					<div class="timvision-note">PER 6 MESI, POI 14,99€/MESE</div>
+				</div>
+				<div class="timvision-card">
+					<div class="timvision-title">Calcio e Sport Light</div>
+					<div class="timvision-icons"> <img src="img/disney.png" alt="Disney+"> <img src="img/infinity.png" alt="Infinity+"> <img src="img/timvision.png" alt="TIMVISION"> <img src="img/dazn.png" alt="DAZN"> </div>
+					<div class="timvision-price">9,99€/MESE</div>
+					<div class="timvision-note">PER 3 MESI, POI 13,99€/MESE</div>
+				</div>
+				<div class="timvision-card">
+					<div class="timvision-title">Family</div>
+					<div class="timvision-icons"> <img src="img/netflix.png" alt="Netflix"> <img src="img/infinity.png" alt="Infinity+"> <img src="img/disney.png" alt="Disney+"> <img src="img/prime.png" alt="Prime Video"> <img src="img/timvision.png" alt="TIMVISION"> <img src="img/dazn.png" alt="DAZN"> </div>
+					<div class="timvision-price">14,99€/MESE</div>
+					<div class="timvision-note">PER 3 MESI, POI 19,99€/MESE</div>
+				</div>
+				<div class="timvision-card">
+					<div class="timvision-title">Calcio e Sport</div>
+					<div class="timvision-icons"> <img src="img/disney.png" alt="Disney+"> <img src="img/infinity.png" alt="Infinity+"> <img src="img/timvision.png" alt="TIMVISION"> <img src="img/dazn.png" alt="DAZN"> </div>
+					<div class="timvision-price">24,99€/MESE</div>
+					<div class="timvision-note">PER 3 MESI, POI 34,99€/MESE</div>
+				</div>
+				<div class="timvision-card">
+					<div class="timvision-title">Gold</div>
+					<div class="timvision-icons"> <img src="img/netflix.png" alt="Netflix"> <img src="img/infinity.png" alt="Infinity+"> <img src="img/disney.png" alt="Disney+"> <img src="img/prime.png" alt="Prime Video"> <img src="img/timvision.png" alt="TIMVISION"> <img src="img/dazn.png" alt="DAZN"> </div>
+					<div class="timvision-price">34,99€/MESE</div>
+					<div class="timvision-note">PER 3 MESI, POI 42,99€/MESE</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="newsim-or-not" class="promo-card hidden">
 			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
 			<button onclick="tornaIndietroTimNew()">⬅️Torna Indietro</button>
 			<h2><i class="fas fa-sim-card"></i> Nuovo numero o vuoi tenere il tuo?</h2>
@@ -72,10 +112,18 @@
 			<button onclick="mostraOpzioniNewSim('voce')">Voce</button>
 			<button onclick="mostraOpzioniNewSim('dati')">Dati</button>
 			<button onclick="mostraOpzioniNewSim('etnica')">Etnica</button>
-			<div id="contenuto-new-sim" class="promo-card hidden"></div>
+			<div id="contenuto-new-sim" class="hidden"></div>
 		</section>
 
-		<section id="portabilita" class="hidden">
+		<section id="gia-sim" class="promo-card hidden">
+			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
+			<button onclick="tornaIndietroTimGiaSim()">⬅️Torna Indietro</button>
+			<h3>Seleziona:</h3>
+			<button onclick="mostraOpzioniGiaSim('estero')">Estero</button>
+			<div id="contenuto-gia-sim" class="hidden"></div>
+		</section>
+
+		<section id="portabilita" class="promo-card hidden">
 			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
 			<button onclick="tornaIndietroTimPort()">⬅️Torna Indietro</button>
 			<h3>Seleziona operatore:</h3>
@@ -84,10 +132,10 @@
 			<button onclick="mostraOpzioniOperatore('wind')">Wind</button>
 			<button onclick="mostraOpzioniOperatore('very')">Very</button>
 			<button onclick="mostraOpzioniOperatore('op-vir')">Operatori Virtuali</button>
-			<div id="contenuto-operatore" class="promo-card hidden"></div>
+			<div id="contenuto-operatore" class="hidden"></div>
 		</section>
 
-		<section id="internet-options" class="hidden">
+		<section id="internet-options" class="promo-card hidden">
 			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
 			<button onclick="tornaIndietroTimFisso()">⬅️Torna Indietro</button>
 			<h2><i class="fas fa-wifi"></i>Offerte Internet</h2>
@@ -95,7 +143,7 @@
 			<button onclick="mostraUnica()">TIM UNICA</button>
 		</section>
 
-		<section id="new-internet" class="hidden">
+		<section id="new-internet" class="promo-card hidden">
 			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
 			<button onclick="tornaIndietroTimNewFisso()">⬅️Torna Indietro</button>
 			<h2><i class="fas fa-wifi"></i>Offerte Internet</h2>
@@ -104,7 +152,20 @@
 			<div id="contenuto-internet" class="hidden"></div>
 		</section>
 
-		<section id="print3d-options" class="hidden">
+		<!--SKY-->
+		<section id="categorie-sky" class="promo-card hidden">
+			<header>
+				<button onclick="tornaIndietro()" class="sky-but"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
+				<button onclick="tornaIndietroSky()">⬅️Torna Indietro</button>
+				<h1><i class="fas fa-tags"></i> Promo SKY</h1>
+				<h3>Benvenuto! Seleziona una categoria per vedere le offerte disponibili.</h3>
+			</header>
+			<button onclick="mostraPromoSky('mobile')"><i class="fas fa-phone"></i> Mobile</button>
+			<button onclick="mostraPromoSky('internet')"><i class="fas fa-wifi"></i> Fisso</button>
+			<div id="contenuto-sky" class="hidden"></div>
+		</section>
+
+		<section id="print3d-options" class="promo-card hidden">
 			<button onclick="tornaIndietro()">⬅️Torna Indietro</button>
 			<h2><i class="fas fa-wifi"></i>Prodotti Stampa 3D</h2>
 			<button onclick="mostraOpzioni3D('souvenir')"><img src="img/souvenir.jpg" alt="souvenir" class="categoria-icon"></img><br><span>Souvenir</span></button>
@@ -114,14 +175,14 @@
 			<div id="contenuto-3d" class="hidden"></div>
 		</section>
 
-		<section id="stampa-options" class="hidden">
+		<section id="stampa-options" class="promo-card hidden">
 			<button onclick="tornaIndietro()">⬅️Torna Indietro</button>
 			<h2><i class="fas fa-wifi"></i>Prodotti Stampe Personalizzate</h2>
 			<button onclick="mostraOpzioniStampa('souvenir')">Cover Smartphone</button>
 			<button onclick="mostraOpzioniStampa('litofanie')">Cover AirPods</button>
 		</section>
 
-		<section id="unica-cont" class="hidden">
+		<section id="unica-cont" class="promo-card hidden">
 			<button onclick="tornaIndietro()"><i class="fa fa-home" aria-hidden="true"></i>HOME</button>
 			<button onclick="tornaIndietroTimUnica()">⬅️Torna Indietro</button>
 			<div id="contenuto-unica" class="hidden"></div>
@@ -134,17 +195,15 @@
 				</div>
 			</div>
 			<div class="unica-info">
-				<div class="promo-card">
-					<li><strong style="color: red;">NOVITÁ:</strong> Per i nuovi clienti TIM mobili che scelgono di attivare una tra le offerte presenti nella sezione compatibilità, verrà attivata automaticamente la nuova opzione <strong>TIM 15 GB 5G</strong>, ha durata 30 giorni e serve a coprire il tempo necessario per espletazione della linea fissa e attivare <strong>TIM UNICA POWER</strong>.</li>
-					<li><strong>TIM UNICA Power GRATIS</strong> per i nuovi clienti di linea fissa con TIM WiFi Casa/Aree Bianche, Premium Base, o TIM WiFi Power FWA.</li>
-					<li><strong>Promo Tim Unica Power 3 SIM:</strong> TIM UNICA Power GRATIS se il network ha più di 3 SIM; anche per clienti che migrano da TIM UNICA vs TIM UNICA Power con almeno 3 SIM. Tale beneficio sarà riconosciuto fino a quando verranno mantenute in Tim Unica Power almeno tre linee mobili di Tim.</li>
-					<li>TIM UNICA Power è l’Offerta riservata ai clienti TIM che hanno attiva una linea telefonica di rete fissa e che permette di avere ogni mese <strong>GIGA ILLIMITATI in 5G ULTRA</strong> e <strong>6GB in roaming UE</strong> per ciascuna linea mobile associata in TIM UNICA Power. È possibile associare a TIM UNICA Power fino a 6 linee mobili della famiglia, anche con intestatario diverso dal titolare di linea fissa.</li>
-					<li><strong>TIM UNICA POWER</strong> non compatibile con bollettino postale</li>
-				</div>
+				<li><strong style="color: red;">NOVITÁ:</strong> Per i nuovi clienti TIM mobili che scelgono di attivare una tra le offerte presenti nella sezione compatibilità, verrà attivata automaticamente la nuova opzione <strong>TIM 15 GB 5G</strong>, ha durata 30 giorni e serve a coprire il tempo necessario per espletazione della linea fissa e attivare <strong>TIM UNICA POWER</strong>.</li>
+				<li><strong>TIM UNICA Power GRATIS</strong> per i nuovi clienti di linea fissa con TIM WiFi Casa/Aree Bianche, Premium Base, o TIM WiFi Power FWA.</li>
+				<li><strong>Promo Tim Unica Power 3 SIM:</strong> TIM UNICA Power GRATIS se il network ha più di 3 SIM; anche per clienti che migrano da TIM UNICA vs TIM UNICA Power con almeno 3 SIM. Tale beneficio sarà riconosciuto fino a quando verranno mantenute in Tim Unica Power almeno tre linee mobili di Tim.</li>
+				<li>TIM UNICA Power è l’Offerta riservata ai clienti TIM che hanno attiva una linea telefonica di rete fissa e che permette di avere ogni mese <strong>GIGA ILLIMITATI in 5G ULTRA</strong> e <strong>6GB in roaming UE</strong> per ciascuna linea mobile associata in TIM UNICA Power. È possibile associare a TIM UNICA Power fino a 6 linee mobili della famiglia, anche con intestatario diverso dal titolare di linea fissa.</li>
+				<li><strong>TIM UNICA POWER</strong> non compatibile con bollettino postale</li>
 			</div>
 		</section>
 
-		<section id="resine-options" class="hidden">
+		<section id="resine-options" class="promo-card hidden">
 			<button onclick="tornaIndietro()">⬅️Torna Indietro</button>
 			<header>
 				<h1><i class="fas fa-tags"></i>Resine Protettive</h1>
@@ -152,12 +211,11 @@
 				<button onclick="mostraOfferteResine('eco')">Eco</button>
 				<button onclick="mostraOfferteResine('base')">Base</button>
 				<button onclick="mostraOfferteResine('ultra')">Ultra</button>
-				<button onclick="mostraOfferteResine('max')">Max</button>
+				<button onclick="mostraOfferteResine('max')">Extreme</button>
 				<div id="contenuto-resine" class="hidden" style="display:flex;"></div>
 			</header>
 		</section>
 	</main>
-
 </body>
 
 </html>
