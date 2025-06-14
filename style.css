@@ -556,6 +556,7 @@ ul li {
 }
 .timvision-container {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 75px;
 	overflow-x: auto;
 	padding-bottom: 20px;
