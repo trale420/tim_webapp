@@ -14,6 +14,8 @@ function mostraOfferteServizio(gestore) {
 	document.getElementById("categorie-servizi").classList.add("hidden");
 	if (gestore == "tim") {
 		document.getElementById("categorie-tim").classList.remove("hidden");
+	} else if (gestore == "sky") {
+		document.getElementById("categorie-sky").classList.remove("hidden");
 	}
 }
 function mostraPromo(categoria) {
@@ -22,10 +24,8 @@ function mostraPromo(categoria) {
 		document.getElementById("mobile-options").classList.remove("hidden");
 	} else if (categoria == "internet") {
 		document.getElementById("internet-options").classList.remove("hidden");
-	} else if (categoria == "smartphone") {
-		document.getElementById("smartphone-options").classList.remove("hidden");
-	} else if (categoria == "business") {
-		document.getElementById("business-options").classList.remove("hidden");
+	} else if (categoria == "vision") {
+		document.getElementById("vision-options").classList.remove("hidden");
 	}
 }
 
@@ -47,6 +47,9 @@ function tornaIndietro() {
 	document.getElementById("print3d-options").classList.add("hidden");
 	document.getElementById("stampa-options").classList.add("hidden");
 	document.getElementById("contenuto-3d").classList.add("hidden");
+	document.getElementById("categorie-sky").classList.add("hidden");
+	document.getElementById("contenuto-sky").classList.add("hidden");
+	document.getElementById("vision-options").classList.add("hidden");
 }
 function tornaIndietroTim() {
 	document.getElementById("categorie-servizi").classList.remove("hidden");
@@ -80,6 +83,19 @@ function tornaIndietroTimNewFisso() {
 	document.getElementById("internet-options").classList.remove("hidden");
 	document.getElementById("new-internet").classList.add("hidden");
 }
+function tornaIndietroSky() {
+	document.getElementById("categorie-servizi").classList.remove("hidden");
+	document.getElementById("categorie-sky").classList.add("hidden");
+	document.getElementById("contenuto-sky").classList.add("hidden");
+}
+function tornaIndietroTimGiaSim() {
+	document.getElementById("mobile-options").classList.remove("hidden");
+	document.getElementById("gia-sim").classList.add("hidden");
+}
+function tornaIndietroTimVision() {
+	document.getElementById("categorie-tim").classList.remove("hidden");
+	document.getElementById("vision-options").classList.add("hidden");
+}
 
 function mostraClienteInternet(tipo) {
 	if (tipo == "gia") {
@@ -92,13 +108,44 @@ function mostraUnica() {
 	document.getElementById("internet-options").classList.add("hidden");
 	document.getElementById("unica-cont").classList.remove("hidden");
 }
+function mostraOpzioniGiaSim(tipo) {
+	contenitore = document.getElementById("contenuto-gia-sim");
+	contenitore.classList.remove("hidden");
+	if (tipo == "estero") {
+		contenitore.innerHTML = `
+			<div class="tim-viaggio-pass">
+  <div class="tim-viaggio-header">Resta connesso con TIM anche quando sei all’estero!</div>
+  
+  <div class="tim-viaggio-box">
+    <div class="tim-viaggio-tags">
+      <span class="tag">15 GIGA</span>
+      <span class="tag">500 MINUTI E 500 SMS</span>
+    </div>
 
+    <h2 class="pass-title">TIM in Viaggio PASS</h2>
+    <p class="pass-desc">
+      Più Giga, minuti e SMS per i tuoi viaggi in Europa, Regno Unito, USA, Canada e Brasile
+    </p>
+
+    <div class="pass-price">
+      <span class="price-big">19</span><span class="price-dec">,99€</span>
+      <div class="price-sub">per 30 giorni</div>
+    </div>
+
+    <div class="price-note">i.i. addebitati al momento dell’attivazione</div>
+  </div>
+</div>
+
+		`;
+	}
+}
 function mostraCliente(tipo) {
 	if (tipo === "nuovo") {
 		document.getElementById("newsim-or-not").classList.remove("hidden");
 		document.getElementById("mobile-options").classList.add("hidden");
-	} else {
-		alert("Funzione già cliente in sviluppo.");
+	} else if (tipo == "gia") {
+		document.getElementById("gia-sim").classList.remove("hidden");
+		document.getElementById("mobile-options").classList.add("hidden");
 	}
 }
 
@@ -305,69 +352,131 @@ function mostraOfferteResine(tipo) {
 	if (tipo == "eco") {
 		contenitore.innerHTML = `
 		 	<div class="resine-container">
-			<div class="resine-name"><h1>Lucida Base</h1></div>
+			<div class="resine-name"><h1>Original</h1></div>
+			<div class="resine-price"><h1>15€</h1></div>
 				<div class="resine-foto">
     			<img src="img/mobilax.png" alt="Mobilax" height=250>
 					<img src="img/mobilax.jpg" alt="Mobilax1" height=250>
-					<div class="resine-desc"><h3>Protegge da graffi, applicazione in 5 minuti</h3></div>
   			</div>
+				<div class="resine-desc"><h3>Proteggi il tuo smartphone con la resina protettiva ultra resistente: una soluzione trasparente, discreta ed efficace contro graffi e segni quotidiani.
+🛡️ Tecnologia liquida avanzata che si adatta perfettamente a qualsiasi display, senza alterarne la sensibilità o la luminosità.
+⏱️ Applicazione facile in soli 5 minuti, senza bolle e senza stress.
+
+Per soli 15€, trasformi il tuo schermo in un'armatura invisibile.</h3></div>
 			</div>
 		`;
 	} else if (tipo == "base") {
 		contenitore.innerHTML = `
 		 	<div class="resine-container">
-			<div class="resine-name"><h1>Lucida</h1></div>
+			<div class="resine-name"><h1>Clear Protect</h1></div>
+			<div class="resine-price"><h1>20€</h1></div>
 				<div class="resine-foto">
     			<img src="img/clear1.jpg" alt="Clear" height=250>
 					<img src="img/clear.jpg" alt="Clear" height=250>
-					<div class="resine-desc"><h3>Protegge da graffi, materiale autorigenerante, applicazione in 5 minuti</h3></div>
   			</div>
+				<div class="resine-desc"><h3>Non solo protegge, ma ripara!
+Con la resina rigenerante premium, il tuo smartphone torna come nuovo:
+✨ Rigenera i micrograffi esistenti e crea una pellicola ultraresistente contro futuri danni.
+🧪 Formula liquida intelligente che si adatta a ogni schermo, invisibile e 100% touch-friendly.
+⏱️ Applicazione rapida in 5 minuti, senza aloni né bolle.
+
+✅ Protegge, lucida e rinnova lo schermo del tuo smartphone – il tutto per solo 20€.
+Perfetta per chi vuole il massimo della protezione con un tocco di magia rigenerante.</h3></div>
 			</div>
 		`;
 	} else if (tipo == "ultra") {
 		contenitore.innerHTML = `
 		 	<div class="resine-container">
-			<div class="resine-name"><h1>Lucida Ultra</h1></div>
+			<div class="resine-name"><h1>Ultra Clear</h1></div>
+			<div class="resine-price"><h1>25€</h1></div>
 				<div class="resine-foto">
     			<img src="img/elite.png" alt="Elite" height=250>
 					<img src="img/elite1.png" alt="Elite" height=250>
-					<div class="resine-desc"><h3>Protegge da graffi e urti, materiale autorigenerante, applicazione in 5 minuti</h3></div>
   			</div>
+				<div class="resine-desc"><h3>📱 Protezione totale, tecnologia intelligente.
+Questa resina di ultima generazione non si limita a proteggere: si autorigenera.
+🛡️ Difende lo schermo da graffi, cadute e urti accidentali, grazie a una formula rinforzata che assorbe l’impatto.
+✨ I micrograffi si riparano da soli in poche ore, mantenendo il tuo display sempre come nuovo.
+💎 Invisibile, ultraresistente e 100% compatibile con ogni modello.
+⏱️ Applicazione facile in 5 minuti, senza bolle né residui.
+
+💪 Per chi cerca il massimo della tecnologia e della resistenza, tutto in un solo prodotto.
+👉 Solo 25€ per una protezione intelligente, che si cura da sola.</h3></div>
 			</div>
 			<div class="resine-container">
-			<div class="resine-name"><h1>Opaca Ultra</h1></div>
+			<div class="resine-name"><h1>Ultra Matte</h1></div>
+			<div class="resine-price"><h1>25€</h1></div>
 				<div class="resine-foto">
 					<img src="img/matte.jpg" alt="Matte" height=250>
 					<img src="img/matte1.jpg" alt="Matte" height=250>
-					<div class="resine-desc"><h3>Protegge da graffi e urti, materiale autorigenerante, opaca antiriflesso, applicazione in 5 minuti</h3></div>
   			</div>
+				<div class="resine-desc"><h3>🌫️ Finitura opaca, protezione totale.
+La resina opaca di nuova generazione è pensata per chi vuole uno schermo sempre pulito, elegante e ultra resistente.
+🛡️ Protegge da graffi, urti e cadute, con una formula rinforzata che assorbe gli impatti.
+🔄 Autorigenerante: i micrograffi spariscono da soli, mantenendo il display come nuovo.
+👆 Effetto anti-impronta e zero riflessi, perfetta per l’uso sotto il sole e per chi cerca un look più discreto.
+⏱️ Si applica in 5 minuti, senza bolle e compatibile con tutti i modelli.
+
+🎯 Solo 25€ per uno schermo protetto, opaco e intelligente.
+Lo stile incontra la tecnologia.</h3></div>
 			</div>
 		`;
 	} else if (tipo == "max") {
 		contenitore.innerHTML = `
 		 	<div class="resine-container">
 			<div class="resine-name"><h1>Privacy</h1></div>
+			<div class="resine-price"><h1>30€</h1></div>
 				<div class="resine-foto">
     			<img src="img/privacy.jpg" alt="Privacy" height=250>
-					<img src="img/privacy1.jpg" alt="Privacy" height=250>
-					<div class="resine-desc"><h3>Protegge da graffi e urti, materiale autorigenerante, funzione nascondi schermo privacy, applicazione in 5 minuti</h3></div>
+					<img src="img/privacy1.jpg" alt="Privacy" height=250>	
   			</div>
+				<div class="resine-desc"><h3>🔒 Proteggi lo schermo. Proteggi la tua privacy.
+La resina premium da €30 è la scelta ideale per chi cerca massima resistenza e protezione visiva da occhi indiscreti.
+🛡️ Più spessa e robusta, offre una barriera potenziata contro urti, graffi e cadute.
+🙈 Effetto privacy: lo schermo è visibile solo frontalmente, perfetto per messaggi, documenti e contenuti sensibili.
+🔄 Autorigenerante, ripara da sola i micrograffi per uno schermo sempre perfetto.
+⏱️ Applicazione semplice in 5 minuti, senza aloni né bolle.
+
+💼 Ideale per chi lavora con dati riservati o semplicemente non vuole sguardi curiosi.
+✅ 30€ per la miglior combinazione tra sicurezza, privacy e tecnologia.</h3></div>
 			</div>
 			<div class="resine-container">
 			<div class="resine-name"><h1>Opaca Privacy</h1></div>
+			<div class="resine-price"><h1>30€</h1></div>
 				<div class="resine-foto">
 					<img src="img/privacy-matte1.jpg" alt="Privacy Matte" height=250>
 					<img src="img/privacy-matte.jpg" alt="Privacy Matte" height=250>
-					<div class="resine-desc"><h3>Protegge da graffi e urti, materiale autorigenerante, opaca antiriflesso, fuznione nascondi schermo, applicazione in 5 minuti</h3></div>
   			</div>
+				<div class="resine-desc"><h3>🌫️🔒 Massima privacy, finitura opaca, protezione estrema.
+La resina definitiva per chi non vuole compromessi:
+🛡️ Protegge da urti, graffi e cadute con uno strato ultra resistente.
+🙈 Effetto privacy integrato: lo schermo è visibile solo frontalmente, invisibile da angolazioni laterali.
+✨ Finitura opaca anti-riflesso e anti-impronta: visibilità perfetta anche sotto la luce diretta.
+🔄 Autorigenerante, ripara autonomamente micrograffi e imperfezioni.
+⏱️ Si applica in 5 minuti, compatibile con ogni smartphone.
+
+💼 Ideale per chi cerca riservatezza, stile e robustezza in un solo gesto.
+✅ Tutto questo a 30€. Il top della protezione, con un tocco di classe.
+
+</h3></div>
 			</div>
 			<div class="resine-container">
 			<div class="resine-name"><h1>Fortify Hybrid</h1></div>
+			<div class="resine-price"><h1>30€</h1></div>
 				<div class="resine-foto">
 					<img src="img/hybrid1.jpeg" alt="Hybrid" height=250>
-					<img src="img/hybrid.png" alt="Hybrid" height=250>
-					<div class="resine-desc"><h3>Protegge da graffi e urti, materiale misto vetro per una protezione ottimale, effetto vetro, applicazione in 5 minuti</h3></div>
+					<img src="img/hybrid.png" alt="Hybrid" height=250>				
   			</div>
+				<div class="resine-desc"><h3>🛡️ Il meglio di due mondi: resina + vetro.
+Fortify di Cellularline è la rivoluzione nella protezione dello schermo:
+🔗 Unisce la resistenza di un vetro temperato alla flessibilità e adattabilità della resina liquida, per una barriera invisibile e super performante.
+💥 Anti-urto e anti-graffio, protegge lo schermo anche dalle cadute più dure.
+✨ Autorigenerante, elimina da sola i micrograffi nel tempo.
+👆 Touch perfetto, zero bolle, applicazione semplice e veloce.
+🔄 Compatibile con tutti i modelli e senza interferenze con le cover.
+
+💎 La soluzione ibrida più evoluta per chi vuole una protezione da vero top di gamma.
+✅ Solo 35€ per lo scudo definitivo firmato Cellularline.</h3></div>
 			</div>
 		`;
 	}
@@ -1076,3 +1185,109 @@ function mostraOpzioni3D(tipo) {
 		`;
 	}
 }
+
+function mostraPromoSky(tipo) {
+	const contenitore = document.getElementById("contenuto-sky");
+	contenitore.classList.remove("hidden");
+	if (tipo == "mobile") {
+		contenitore.innerHTML = `
+					<div class="sky-wrapper">
+  <div class="sky-card">
+    <div class="sky-header">Sky Mobile</div>
+    <div class="sky-price-badge">
+      <span class="sky-price-main">8,95€</span><span class="sky-price-sub">/mese</span>
+      <div class="sky-5g-badge">5G<br>nelle aree<br>coperte</div>
+    </div>
+    <ul class="sky-features">
+      <li><strong>Minuti illimitati</strong></li>
+      <li><strong>100 SMS</strong></li>
+      <li><span class="sky-gb">150 GB</span></li>
+      <li><strong>14 GB In Roaming UK, UE, Ucraina, Svizzera</strong></li>
+    </ul>
+    <div class="sky-footer">Addebito iniziale in fattura: <strong>18,95€*</strong></div>
+  </div>
+
+  <div class="sky-card">
+    <div class="sky-header">Sky Mobile Full</div>
+    <div class="sky-price-badge">
+      <span class="sky-price-main">10,95€</span><span class="sky-price-sub">/mese</span>
+      <div class="sky-5g-badge">5G<br>nelle aree<br>coperte</div>
+    </div>
+    <ul class="sky-features">
+      <li><strong>Minuti illimitati</strong></li>
+      <li><strong>100 SMS</strong></li>
+      <li><span class="sky-gb">200 GB</span></li>
+      <li><strong>17 GB In Roaming UK, UE, Ucraina, Svizzera</strong></li>
+    </ul>
+    <div class="sky-footer">Addebito iniziale in fattura: <strong>20,95€*</strong></div>
+  </div>
+
+  <div class="sky-card">
+    <div class="sky-header">Sky Mobile Maxi</div>
+    <div class="sky-price-badge">
+      <span class="sky-price-main">12,95€</span><span class="sky-price-sub">/mese</span>
+      <div class="sky-5g-badge">5G<br>nelle aree<br>coperte</div>
+    </div>
+    <ul class="sky-features">
+      <li><strong>Minuti illimitati</strong></li>
+      <li><strong>100 SMS</strong></li>
+      <li><span class="sky-gb">300 GB</span></li>
+      <li><strong>20 GB In Roaming UK, UE, Ucraina, Svizzera</strong></li>
+    </ul>
+    <div class="sky-footer">Addebito iniziale in fattura: <strong>22,95€*</strong></div>
+  </div>
+	<div class="sky-wrapper">
+		<!-- Sky Mobile -->
+		<div class="sky-card">
+			<div class="sky-header">Sky Mobile</div>
+			<div class="sky-price-badge"> <span class="sky-price-main">8,95€</span><span class="sky-price-sub">/mese</span>
+				<div class="sky-5g-badge">5G<br>nelle aree<br>coperte</div>
+			</div>
+			<ul class="sky-features">
+				<li><strong>Minuti illimitati</strong></li>
+				<li><strong>100 SMS</strong></li>
+				<li><span class="sky-gb">150 GB</span></li>
+				<li><strong>14 GB In Roaming UK, UE, Ucraina, Svizzera</strong></li>
+			</ul>
+			<div class="sky-footer">Ricarica iniziale: <strong>20€*</strong></div>
+		</div> <!-- Sky Mobile Full -->
+		<div class="sky-card">
+			<div class="sky-header">Sky Mobile Full</div>
+			<div class="sky-price-badge"> <span class="sky-price-main">10,95€</span><span class="sky-price-sub">/mese</span>
+				<div class="sky-5g-badge">5G<br>nelle aree<br>coperte</div>
+			</div>
+			<ul class="sky-features">
+				<li><strong>Minuti illimitati</strong></li>
+				<li><strong>100 SMS</strong></li>
+				<li><span class="sky-gb">200 GB</span></li>
+				<li><strong>17 GB In Roaming UK, UE, Ucraina, Svizzera</strong></li>
+			</ul>
+			<div class="sky-footer">Ricarica iniziale: <strong>25€*</strong></div>
+		</div> <!-- Sky Mobile Maxi -->
+		<div class="sky-card">
+			<div class="sky-header">Sky Mobile Maxi</div>
+			<div class="sky-price-badge"> <span class="sky-price-main">12,95€</span><span class="sky-price-sub">/mese</span>
+				<div class="sky-5g-badge">5G<br>nelle aree<br>coperte</div>
+			</div>
+			<ul class="sky-features">
+				<li><strong>Minuti illimitati</strong></li>
+				<li><strong>100 SMS</strong></li>
+				<li><span class="sky-gb">300 GB</span></li>
+				<li><strong>20 GB In Roaming UK, UE, Ucraina, Svizzera</strong></li>
+			</ul>
+			<div class="sky-footer">Ricarica iniziale: <strong>25€*</strong></div>
+		</div>
+
+		<div class="internazionale-banner">
+  <img src="img/chiamate-internazionali-icon.png" alt="Chiamate internazionali" class="internazionale-icon">
+  <div class="internazionale-text">
+    <strong>Chiamate internazionali incluse<br>verso 60 destinazioni internazionali.</strong>
+  </div>
+</div>
+	</div>
+
+
+		`;
+	}
+}
+
