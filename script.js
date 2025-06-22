@@ -461,8 +461,25 @@ La resina definitiva per chi non vuole compromessi:
 </h3></div>
 			</div>
 			<div class="resine-container">
-			<div class="resine-name"><h1>Fortify Hybrid</h1></div>
+			<div class="resine-name"><h1>XTREME PRO</h1></div>
 			<div class="resine-price"><h1>30€</h1></div>
+				<div class="resine-foto">
+					<img src="img/xtreme1.jpeg" alt="Xtreme Pro" height=250>
+					<img src="img/xtreme.png" alt="Xtreme Pro" height=250>				
+  			</div>
+				<div class="resine-desc"><h3>🛡️ Estrema resistenza, protezione totale: Extreme Pro di Cellularline è la nuova frontiera per lo schermo del tuo smartphone.
+🔗 Realizzata in vetro temperato ultra-resistente con durezza 9H, garantisce una barriera solida contro graffi, urti e cadute accidentali.
+💥 Anti-urto e anti-graffio, protegge anche nelle situazioni più estreme senza compromettere estetica e sensibilità.
+✨ Trattamento oleorepellente per uno schermo sempre limpido, senza impronte né aloni.
+👆 Massima reattività al tocco: risposta immediata e scorrimento fluido come sul vetro originale.
+📐 Design edge-to-edge con bordi arrotondati, zero bolle all'applicazione e piena compatibilità con le cover.
+💎 La scelta perfetta per chi cerca una protezione robusta, elegante e invisibile.
+✅ Solo 30€ per una protezione professionale firmata Cellularline.</h3></div>
+			</div>
+			
+			<div class="resine-container">
+			<div class="resine-name"><h1>Fortify Hybrid</h1></div>
+			<div class="resine-price"><h1>35€</h1></div>
 				<div class="resine-foto">
 					<img src="img/hybrid1.jpeg" alt="Hybrid" height=250>
 					<img src="img/hybrid.png" alt="Hybrid" height=250>				
@@ -844,7 +861,7 @@ function mostraOpzioniOperatore(operatore) {
   <br><br>
   <div class="price-badge">
     <span class="price-main">7,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="4G Icon" class="icon-5g">
+    <img src="img/5g-logo.png" alt="4G Icon" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -860,7 +877,7 @@ function mostraOpzioniOperatore(operatore) {
   <h2 style="color: #ff2a00;">Ricarica Automatica</h2>
   <div class="price-badge">
     <span class="price-main">7,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="4G Icon" class="icon-5g">
+    <img src="img/5g-logo.png" alt="4G Icon" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -881,7 +898,7 @@ function mostraOpzioniOperatore(operatore) {
   <h2>Ricarica Automatica</h2>
   <div class="price-badge">
     <span class="price-main">7,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Ultra" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Ultra" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -897,7 +914,7 @@ function mostraOpzioniOperatore(operatore) {
  <br><br>
   <div class="price-badge">
     <span class="price-main">7,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Ultra" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Ultra" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -913,7 +930,7 @@ function mostraOpzioniOperatore(operatore) {
   <br><br>
   <div class="price-badge">
     <span class="price-main">9,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Ultra" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Ultra" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -929,7 +946,7 @@ function mostraOpzioniOperatore(operatore) {
   <h2>Ricarica Automatica</h2>
   <div class="price-badge">
     <span class="price-main">9,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Ultra" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Ultra" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -949,7 +966,7 @@ function mostraOpzioniOperatore(operatore) {
   <br><br>
   <div class="price-badge">
     <span class="price-main">8,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Ultra" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Ultra" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -966,7 +983,7 @@ function mostraOpzioniOperatore(operatore) {
   <h2>Ricarica Automatica</h2>
   <div class="price-badge">
     <span class="price-main">8,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Ultra" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Ultra" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -983,7 +1000,7 @@ function mostraOpzioniOperatore(operatore) {
   <br><br>
   <div class="price-badge">
     <span class="price-main">7,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="4G Icon" class="icon-5g">
+    <img src="img/5g-logo.png" alt="4G Icon" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -999,7 +1016,7 @@ function mostraOpzioniOperatore(operatore) {
   <h2 style="color: #ff2a00;">Ricarica Automatica</h2>
   <div class="price-badge">
     <span class="price-main">7,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="4G Icon" class="icon-5g">
+    <img src="img/5g-logo.png" alt="4G Icon" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -1019,7 +1036,7 @@ function mostraOpzioniOperatore(operatore) {
   <h2>Special Per Te New MNP</h2><br><br>
   <div class="price-badge">
     <span class="price-main">9,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Ultra" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Ultra" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -1035,7 +1052,7 @@ function mostraOpzioniOperatore(operatore) {
   <h2>Ricarica automatica</h2>
   <div class="price-badge">
     <span class="price-main">9,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Ultra" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Ultra" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -1051,7 +1068,7 @@ function mostraOpzioniOperatore(operatore) {
   <br><br>
   <div class="price-badge">
     <span class="price-main">7,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G ULTRA" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G ULTRA" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -1068,7 +1085,7 @@ function mostraOpzioniOperatore(operatore) {
   <h2>Ricarica Automatica</h2>
   <div class="price-badge">
     <span class="price-main">7,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G ULTRA" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G ULTRA" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -1085,7 +1102,7 @@ function mostraOpzioniOperatore(operatore) {
   <br><br>
   <div class="price-badge">
     <span class="price-main">5,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Icon" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Icon" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -1100,7 +1117,7 @@ function mostraOpzioniOperatore(operatore) {
   <h2>Ricarica Automatica</h2>
   <div class="price-badge">
     <span class="price-main">5,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Icon" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Icon" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -1115,7 +1132,7 @@ function mostraOpzioniOperatore(operatore) {
   <br><br>
   <div class="price-badge">
     <span class="price-main">12€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Icon" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Icon" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -1131,7 +1148,7 @@ function mostraOpzioniOperatore(operatore) {
   <h2>Ricarica Automatica</h2>
   <div class="price-badge">
     <span class="price-main">12€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Icon" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Icon" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -1147,7 +1164,7 @@ function mostraOpzioniOperatore(operatore) {
   <br><br>
   <div class="price-badge">
     <span class="price-main">7,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Icon" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Icon" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
@@ -1163,7 +1180,7 @@ function mostraOpzioniOperatore(operatore) {
   <h2>Ricarica automatica</h2>
   <div class="price-badge">
     <span class="price-main">7,99€</span><span class="price-sub">/mese</span>
-    <img src="5g-logo.png" alt="5G Icon" class="icon-5g">
+    <img src="img/5g-logo.png" alt="5G Icon" class="icon-5g">
   </div>
   <ul class="promo-details">
     <li><strong>Minuti illimitati</strong></li>
