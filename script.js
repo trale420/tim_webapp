@@ -390,8 +390,8 @@ Perfetta per chi vuole il massimo della protezione con un tocco di magia rigener
 			<div class="resine-name"><h1>Ultra Clear</h1></div>
 			<div class="resine-price"><h1>25€</h1></div>
 				<div class="resine-foto">
-    			<img src="img/elite.png" alt="Elite" height=250>
-					<img src="img/elite1.png" alt="Elite" height=250>
+    			<img src="img/elite.jpg" alt="Elite" height=250>
+					<img src="img/elite1.jpg" alt="Elite" height=250>
   			</div>
 				<div class="resine-desc"><h3>📱 Protezione totale, tecnologia intelligente.
 Questa resina di ultima generazione non si limita a proteggere: si autorigenera.
