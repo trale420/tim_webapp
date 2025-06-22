@@ -289,11 +289,12 @@ ul li {
 	justify-content: center;
 	height: 1500px;
 }
+
 .resine-container {
 	border: 2px solid #ccc;
 	border-radius: 20px;
 	text-align: center; /* Centra testo e blocchi figli */
-	max-width: 500px;
+	max-width: 350px;
 	margin: 0 auto; /* Centra il contenitore nella pagina */
 	padding: 25px;
 }
