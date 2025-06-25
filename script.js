@@ -1131,7 +1131,7 @@ function mostraOpzioniOperatore(operatore) {
   <h2>Power Iron MVNO</h2>
   <br><br>
   <div class="price-badge">
-    <span class="price-main">12€</span><span class="price-sub">/mese</span>
+    <span class="price-main">6.99€</span><span class="price-sub">/mese</span>
     <img src="img/5g-logo.png" alt="5G Icon" class="icon-5g">
   </div>
   <ul class="promo-details">
@@ -1147,7 +1147,7 @@ function mostraOpzioniOperatore(operatore) {
   <h2>Power Iron MVNO</h2>
   <h2>Ricarica Automatica</h2>
   <div class="price-badge">
-    <span class="price-main">12€</span><span class="price-sub">/mese</span>
+    <span class="price-main">6.99€</span><span class="price-sub">/mese</span>
     <img src="img/5g-logo.png" alt="5G Icon" class="icon-5g">
   </div>
   <ul class="promo-details">
